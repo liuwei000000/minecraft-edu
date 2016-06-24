@@ -1,0 +1,4 @@
+name: DavidPlugin
+main: com.huoxingpai.Plugin.DavidPlugin
+version: 1.0
+commands:
