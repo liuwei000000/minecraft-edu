@@ -21,7 +21,13 @@ public final class EventListener implements Listener {
 		
 		ItemStack itemstack = new ItemStack(Material.DIAMOND_SWORD);
 		inventory.addItem(itemstack);
+		Player player = event.getPlayer();
+		Location loc = player.getLocation();
 		
+		World world = player.getWorld();
+		
+	    Sheep sheep = world.spawn(loc, Sheep.class);
+
 
 	}
 
