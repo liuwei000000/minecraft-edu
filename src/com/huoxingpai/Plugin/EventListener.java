@@ -21,7 +21,7 @@ import org.bukkit.inventory.PlayerInventory;
 
 
 public final class EventListener implements Listener {
-	long i = 0;
+	private static long i = 0;
 
 	@EventHandler
 	public void onJoin(PlayerJoinEvent event) {
@@ -69,7 +69,7 @@ public final class EventListener implements Listener {
 		World world = player.getWorld();
 		if (event.getAction().equals(Action.RIGHT_CLICK_AIR)) {
 			player.sendMessage("天空右键第点击");
-			player.chat("点击");
+			player.chat("点击" + i++);
 			if (event.getMaterial() == Material.DIAMOND_SWORD) {
 				World w = player.getWorld();
 				Sheep sheep = w.spawn(loc, Sheep.class);
